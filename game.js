@@ -12,6 +12,12 @@ function ajustaTamanoPalcoJogo(){
 ajustaTamanoPalcoJogo()
 
 function posicaoRandomica(){
+    //remover o mosquito (caso exista)
+
+    if(document.getElementById('mosquito')){
+        document.getElementById('mosquito').remove()
+    }
+    
     var posicaoX = Math.floor(Math.random() * largura) - 90
     var posicaoY = Math.floor(Math.random() * altura) - 90
 
