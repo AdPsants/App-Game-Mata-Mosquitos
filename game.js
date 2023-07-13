@@ -1,6 +1,7 @@
 /****Definir tamanho da tela ****/
 var altura = 0
 var largura= 0
+var vidas = 1
 
 function ajustaTamanoPalcoJogo(){
     altura = window.innerHeight
@@ -16,6 +17,15 @@ function posicaoRandomica(){
 
     if(document.getElementById('mosquito')){
         document.getElementById('mosquito').remove()
+
+    //Controle de vidas
+        if(vidas > 3){
+        alert('Interromper o jogo (GAME OVER)')
+    }else{
+    document.getElementById('v' + vidas).src="image/coracao_vazio.png"
+    }
+
+    vidas++
     }
     
     var posicaoX = Math.floor(Math.random() * largura) - 90
@@ -34,6 +44,9 @@ function posicaoRandomica(){
     mosquito.style.left = posicaoX + 'px'
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
+    mosquito.onclick = function(){
+        this.remove()
+    }
 
     document.body.appendChild(mosquito)
 }
