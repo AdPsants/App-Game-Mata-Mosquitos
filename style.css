@@ -1,3 +1,4 @@
+/**Alterna o tamanho do mosquito **/
 .mosquito1{
     width: 50px;
     height: 50px;
@@ -9,4 +10,11 @@
 .mosquito3{
     width: 90px;
     height: 90px;
+}
+/**Alterna o lado que o mosquito aparece **/
+.ladoA{
+    transform: scaleX(1);
+}
+.ladoB{
+    transform: scaleX(-1);
 }
