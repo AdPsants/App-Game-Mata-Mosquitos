@@ -19,9 +19,11 @@
     </div>
     
     <script>
-        setInterval(function() {
+        document.getElementById('cronometro').innerHTML = tempo
+
+        var criarMosquito = setInterval(function() {
             posicaoRandomica() 
-        }, 1000)
+        }, 2000)
         
     </script>
 </body>
