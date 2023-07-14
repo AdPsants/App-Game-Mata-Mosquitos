@@ -3,6 +3,21 @@ var altura = 0
 var largura= 0
 var vidas = 1
 
+//Controle de niveis de dificuldades
+var criaMosquitoTempo = 1500
+
+var nivel = window.location.search
+nivel = nivel.replace('?', '')
+
+if(nivel === 'normal'){
+    criaMosquitoTempo = 1500
+}else if(nivel === 'dificil'){
+    criaMosquitoTempo = 1000
+}else if(mivel === 'chucknorris'){
+    criaMosquitoTempo = 750
+}
+
+//Ajustar tamanho da tela do game
 function ajustaTamanhoPalcoJogo(){
     altura = window.innerHeight
     largura = window.innerWidth
